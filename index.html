@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Olivia TV</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">Olivia TV</div>
+  <nav id="tabs"></nav>
+  <form id="searchForm"><input id="search" type="search" placeholder="Search channel or show"></form>
+  <div id="clock"></div>
+</header>
+<section id="top">
+  <div id="strip">
+    <div id="sTitle"></div>
+    <div id="sTime"></div>
+    <div id="sDesc"></div>
+    <div class="actions"><button id="btnWatch">Watch</button><button id="btnFav">Favorite</button></div>
+  </div>
+  <div id="pvSlot"><div id="pvLabel"></div><video id="video" playsinline></video></div>
+</section>
+<section id="guide">
+  <div id="times"><div class="chanHead"><button id="prevWin">&#9664;</button><button id="nextWin">&#9654;</button></div><div id="timeRow"></div></div>
+  <div id="rows"></div>
+  <div id="empty"></div>
+</section>
+<div id="player" hidden>
+  <div id="status"></div>
+  <div id="banner">
+    <img id="bLogo" alt="">
+    <div class="bText"><div id="bName"></div><div id="bNow"></div><div id="bNext"></div></div>
+    <div class="bBtns">
+      <button data-act="up">&#9650;</button><button data-act="down">&#9660;</button>
+      <button data-act="fav">&#9733;</button><button data-act="prev">&#8634;</button>
+      <button data-act="fs">&#9974;</button><button data-act="guide">Guide</button>
+    </div>
+  </div>
+</div>
+<div id="info" hidden>
+  <div class="box">
+    <div id="iTitle"></div><div id="iChan"></div><div id="iTime"></div><div id="iDesc"></div>
+    <div class="actions"><button id="iWatch">Watch channel</button><button id="iFav"></button><button id="iClose">Close</button></div>
+  </div>
+</div>
+<div id="toast" hidden></div>
+<div id="loading">Loading channels...</div>
+<script src="app.js"></script>
+</body>
+</html>
